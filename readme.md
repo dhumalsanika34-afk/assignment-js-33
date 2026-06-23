@@ -16,7 +16,7 @@ A sleek, responsive, and interactive web-based dice rolling application. Built u
 * **JavaScript (ES6):** State management, class manipulation, and random generation.
 
 * **Output:** ![Description of Image](/images/roll%20the%20dice.png)
-* **Live Demo:** [mytripplane.netlify.app](https://mytripplane.netlify.app/)
+* **Live Demo:** [assignment-js-33.netlify.app](https://assignment-js-33.netlify.app/)
 
 ## 📂 Project Structure
 
