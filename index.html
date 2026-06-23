@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dice Roller</title>
+    <link rel="stylesheet" href="./css/roll.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Roll Your Luck</h1>
+        <div id="dice">⚀</div>
+        <button onclick="rollDice()">Roll The Dice</button>
+        <div id="result">Waiting to roll...</div>
+    </div>
+
+    <script>
+        const diceElement = document.getElementById("dice");
+        const resultText = document.getElementById("result");
+
+        const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+        function rollDice() {
+            diceElement.classList.add("rolling");
+            resultText.innerText = "Rolling...";
+            setTimeout(() => {
+                const min = 1;
+                const max = 7;
+                const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+                diceElement.classList.remove("rolling");
+                diceElement.innerText = diceFaces[randomNumber - 1];
+                resultText.innerText = `You rolled a ${randomNumber}!`;
+            }, 400);
+        }
+    </script>
+
+</body>
+
+</html>
